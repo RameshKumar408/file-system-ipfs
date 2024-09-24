@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+    <meta name="format-detection" content="telephone=no" />
+
+    ]
+    <link rel="shortcut icon"
+        href="data:image/png;base64,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"
+        type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset styles */
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        body,
+        table,
+        td,
+        div,
+        p,
+        a {
+            -webkit-font-smoothing: antialiased;
+            text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            border-collapse: collapse !important;
+            border-spacing: 0;
+        }
+
+        img {
+            border: 0;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        /* Rounded corners for advanced mail clients only */
+        @media all and (min-width: 560px) {
+            .container {
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -khtml-border-radius: 8px;
+            }
+        }
+
+        /* Set color for auto links (addresses, dates, etc.) */
+        a,
+        a:hover {
+            color: #127db3;
+        }
+
+        .footer a,
+        .footer a:hover {
+            color: #999999;
+        }
+    </style>
+
+    <!-- MESSAGE SUBJECT -->
+    <title>New Property Alert | rabbit</title>
+</head>
+
+<!-- BODY -->
+<!-- Set message background color (twice) and text color (twice) -->
+
+<body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginwidth="0" marginheight="0" width="100%" style="
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      line-height: 100%;
+      background-color: #FAFBFE;
+      color: #000000;
+    " bgcolor="#FAFBFE" text="#000000">
+    <!-- SECTION / BACKGROUND -->
+    <!-- Set message background color one again -->
+    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      " class="background">
+        <tr>
+            <td align="center" valign="top" style="
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0;
+            padding: 0;
+          " bgcolor="#FAFBFE">
+                <!-- WRAPPER -->
+                <!-- Set wrapper width (twice) -->
+                <table border="0" cellpadding="0" cellspacing="0" align="center" width="580" style="
+              border-collapse: collapse;
+              border-spacing: 0;
+              padding: 0;
+              width: inherit;
+              max-width: 580px;
+            " class="wrapper">
+                    <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 6.25%;
+                  padding-right: 6.25%;
+                  width: 87.5%;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  align-items: center;
+                ">
+                            <!-- PREHEADER -->
+                            <!-- Set text color to background color -->
+
+                            <!-- LOGO -->
+                            <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
+                            <a clicktracking="off" target="_blank" style="text-decoration: none"
+                                href="http://34.226.192.180/"><img border="0" vspace="0" hspace="0"
+                                    src="http://34.226.192.180/static/media/logoSmall.fcf08a5c.png width=" 30%"
+                                    alt="Logo" title="Logo" style="
+                      color: #000000;
+                      font-size: 10px;
+                      margin: 0;
+                      padding: 0;
+                      outline: none;
+                      text-decoration: none;
+                      -ms-interpolation-mode: bicubic;
+                      border: none;
+                      display: block;
+                      float: left;
+                    " /></a>
+                            <a clicktracking="off" style="
+                    float: right;
+                    margin: 0;
+                    padding-top: 10px;
+                    text-decoration: none;
+                    align-items: center;
+                  " href="http://34.226.192.180/">Rabbit</a>
+                        </td>
+                    </tr>
+
+                    <!-- End of WRAPPER -->
+                </table>
+
+                <!-- WRAPPER / CONTEINER -->
+                <!-- Set conteiner background color -->
+                <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" width="620" style="
+              border-collapse: collapse;
+              border-spacing: 0;
+              padding: 0;
+              width: inherit;
+              max-width: 620px;
+            " class="container">
+                    <!-- HEADER -->
+                    <!-- Set text color and font family ("sans-serif" or "Georgia, serif") -->
+                    <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 20px;
+                " class="hero">
+                            <a clicktracking="off" target="_blank" style="text-decoration: none"
+                                href="http://34.226.192.180/"><img border="0" vspace="0" hspace="0"
+                                    src="http://34.226.192.180/static/media/logoSmall.fcf08a5c.png"
+                                    alt="Please enable images to view this content" title="Hero Image" style="
+                      width: 10%;
+                      color: #000000;
+                      font-size: 13px;
+                      margin: 0;
+                      padding: 0;
+                      outline: none;
+                      text-decoration: none;
+                      -ms-interpolation-mode: bicubic;
+                      border: none;
+                      display: block;
+                    " /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 6.25%;
+                  padding-right: 6.25%;
+                  width: 87.5%;
+                  font-size: 24px;
+                  font-weight: bold;
+                  line-height: 130%;
+                  padding-top: 25px;
+                  color: #000000;
+                  font-family: 'Roboto', sans-serif;
+                " class="header">
+                            <%= username%> has been Blocked
+                        </td>
+                    </tr>
+
+                    <!-- SUBHEADER -->
+                    <!-- Set text color and font family ("sans-serif" or "Georgia, serif") -->
+
+                    <!-- HERO IMAGE -->
+                    <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 (wrapper x2). Do not set height for flexible images (including "auto"). URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content={{Ìmage-Name}}&utm_campaign={{Campaign-Name}} -->
+
+
+                    <!-- PARAGRAPH -->
+                    <!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
+                    <!-- <tr>
+                        <td align="center" valign="top" style="
+					border-collapse: collapse;
+					border-spacing: 0;
+					margin: 0;
+					padding: 0;
+					padding-left: 6.25%;
+					padding-right: 6.25%;
+					
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 160%;
+					padding-top: 25px;
+					color: #000000;
+					font-family: 'Roboto', sans-serif;
+				  " class="paragraph">
+                            <b> Congrats!</b>
+                        </td>
+                    </tr> -->
+                    <!-- <tr>
+                        <td align="center" valign="top" style="
+					border-collapse: collapse;
+					border-spacing: 0;
+					margin: 0;
+					padding: 0;
+					padding-left: 6.25%;
+					padding-right: 6.25%;
+					
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 160%;
+					padding-top: 25px;
+					color: #000000;
+					font-family: 'Roboto', sans-serif;
+				  " class="paragraph">
+                            New Bid Placed...
+                        </td>
+                    </tr> -->
+                    <!-- 
+                    <tr>
+                        <td align="center" valign="top" style="
+                              border-collapse: collapse;
+                              border-spacing: 0;
+                              margin: 0;
+                              padding: 0;
+                              padding-left: 6.25%;
+                              padding-right: 6.25%;
+                              width: 87.5%;
+                              padding-top: 25px;
+                              padding-bottom: 5px;
+                            " class="button">
+                            <a clicktracking="off" href="https://github.com/konsav/email-templates/" target="_blank"
+                                style="text-decoration: none;">
+                                <table border="0" cellpadding="0" cellspacing="0" align="center" style="
+                                  max-width: 240px;
+                                  min-width: 120px;
+                                  border-collapse: collapse;
+                                  border-spacing: 0;
+                                  padding: 0;
+                                ">
+                                    <tr>
+                                        <td align="center" valign="middle" style="
+                                      padding: 12px 24px;
+                                      margin: 0;
+                                      text-decoration: none;
+                                      border-collapse: collapse;
+                                      border-spacing: 0;
+                                      border-radius: 4px;
+                                      -webkit-border-radius: 4px;
+                                      -moz-border-radius: 4px;
+                                      -khtml-border-radius: 4px;
+                                    " bgcolor="#FF525A">
+                                            <a clicktracking="off" target="_blank" style="
+                                        text-decoration: none;
+                                        color: #ffffff;
+                                        font-family: 'Roboto', sans-serif;
+                                        font-size: 17px;
+                                        font-weight: 400;
+                                        line-height: 120%;
+                                      " href="http://34.226.192.180/explore">
+                                                Explore
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+                        </td>
+                    </tr> -->
+
+                    <!-- <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                 
+                  font-size: 14px;
+                  font-weight: 400;
+                  padding-left: 6.25%;
+              padding-right: 6.25%;
+                  padding-top: 25px;
+                  color: #000000;
+                  font-family: 'Roboto', sans-serif;
+                ">
+
+                            Keep Calm and NFT.
+                        </td>
+                    </tr> -->
+
+
+
+
+
+
+                    <tr>
+                        <td align="center" valign="top" style="
+					border-collapse: collapse;
+					border-spacing: 0;
+					margin: 0;
+					padding: 0;
+					padding-left: 6.25%;
+					padding-right: 6.25%;
+					
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 160%;
+					padding-top: 25px;
+					color: #000000;
+					font-family: 'Roboto', sans-serif;
+				  " class="paragraph">
+                            If you have any questions, please reach out to <a clicktracking="off"
+                                href="mailto:nft@alpharive.com" style="text-decoration: none;">nft@alpharive.com</a>
+                        </td>
+                    </tr>
+
+
+                    <!-- LINE -->
+                    <!-- Set line color -->
+                    <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 6.25%;
+                  padding-right: 6.25%;
+                  width: 87.5%;
+                  padding-top: 25px;
+                " class="line">
+                            <!-- <hr color="#E0E0E0" align="center" width="100%" size="1" noshade
+								style="margin: 0; padding: 0" /> -->
+                        </td>
+                    </tr>
+
+                    <!-- LIST -->
+                    <tr>
+                        <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 6.25%;
+                  padding-right: 6.25%;
+                " class="list-item">
+                            <table align="center" border="0" cellspacing="0" cellpadding="0" style="
+                    width: inherit;
+                    margin: 0;
+                    padding: 0;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                  ">
+                                <!-- LIST ITEM -->
+                                <tr>
+                                    <!-- LIST ITEM IMAGE -->
+                                    <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
+
+
+                                    <!-- LIST ITEM TEXT -->
+                                    <!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
+                                    <td align="center" valign="top" style="
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 160%;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        margin: 0;
+                        
+                        padding-top: 25px;
+                        color: #000000;
+                        font-family: 'Roboto', sans-serif;
+                      " class="paragraph">
+                                        <b style="color: #333333">Thanks You,</b><br />
+
+                                    </td>
+                                </tr>
+                                <td align="center" valign="top" style="
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 160%;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        margin: 0;
+                        padding: 0;
+                        padding-top: 0px;
+                        color: #000000;
+                        font-family: 'Roboto', sans-serif;
+                      " class="paragraph">
+                                    <b style="color: #333333">Rabbit Team</b><br />
+
+                                </td>
+                    </tr>
+
+                    <!-- LIST ITEM -->
+
+                </table>
+            </td>
+        </tr>
+
+        <!-- LINE -->
+        <!-- Set line color -->
+        <tr>
+            <td align="center" valign="top" style="
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 6.25%;
+                  padding-right: 6.25%;
+                  width: 87.5%;
+                  padding-top: 25px;
+                " class="line">
+                <!-- <hr color="#E0E0E0" align="center" width="100%" size="1" noshade style="margin: 0; padding: 0" /> -->
+            </td>
+        </tr>
+
+
+    </table>
+
+    <!-- WRAPPER -->
+    <!-- Set wrapper width (twice) -->
+    <table border="0" cellpadding="0" cellspacing="0" align="center" width="560" style="
+              border-collapse: collapse;
+              border-spacing: 0;
+              padding: 0;
+              width: inherit;
+              max-width: 560px;
+            " class="wrapper">
+        <!-- SOCIAL NETWORKS -->
+        <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
+        <tr>
+            <td align="center" valign="top" style="
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0;
+            padding: 15px 0;
+            
+            
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 160%;
+            padding-top: 10px;
+            color: #000000;
+            font-family: 'Roboto', sans-serif;
+          " class="paragraph">
+                Copyright © 2022 Rabbit. All rights reserved.
+            </td>
+        </tr>
+
+
+    </table>
+    </td>
+    </tr>
+
+
+    </table>
+
+    <!-- End of SECTION / BACKGROUND -->
+    </td>
+    </tr>
+    </table>
+</body>
+
+</html>
