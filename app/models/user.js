@@ -5,7 +5,7 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 
 const UserSchema = new mongoose.Schema(
   {
-    deviceid: {
+    name: {
       type: String,
       required: true
     },

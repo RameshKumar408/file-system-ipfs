@@ -5,14 +5,18 @@ const { check } = require('express-validator')
  * Validates register request
  */
 const validateRegister = [
-  check('deviceid')
+  check('name')
     .exists()
-    .withMessage('DEVICEID MISSING')
+    .withMessage('name MISSING')
     .not()
     .isEmpty()
-    .withMessage('please fill deviceid')
-    .isLength({ min: 5 })
-    .withMessage('must be at least 5 chars long'),
+    .withMessage('please fill name'),
+  check('email')
+    .exists()
+    .withMessage('email MISSING')
+    .not()
+    .isEmpty()
+    .withMessage('please fill email'),
   check('password')
     .exists()
     .withMessage('PASSWORD MISSING')

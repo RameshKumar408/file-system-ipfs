@@ -23,10 +23,10 @@ const register = async (req, res) => {
       const item = await registerUser(req)
       const userInfo = await setUserInfo(item)
       const response = await returnRegisterToken(item, userInfo)
-      sendRegistrationEmailMessage(locale, item)
-      res.status(201).json({
-        success : true,
-        result:  response,
+      // sendRegistrationEmailMessage(locale, item)
+      res.status(200).json({
+        success: true,
+        result: response,
         message: null
       })
     }

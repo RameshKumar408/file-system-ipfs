@@ -16,7 +16,7 @@ const {
 const saveUserAccessAndReturnToken = (req = {}, user = {}) => {
   return new Promise((resolve, reject) => {
     const userAccess = new UserAccess({
-      deviceid: user.deviceid,
+      email: user.email,
       ip: getIP(req),
       browser: getBrowserInfo(req),
       country: getCountry(req)

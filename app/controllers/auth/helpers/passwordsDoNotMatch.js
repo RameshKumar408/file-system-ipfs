@@ -13,7 +13,7 @@ const passwordsDoNotMatch = async (user = {}) => {
       user.loginAttempts += 1
       await saveLoginAttemptsToDB(user)
       if (user.loginAttempts <= LOGIN_ATTEMPTS) {
-        return reject(buildErrObject(409, 'Incorrect PIN'))
+        return reject(buildErrObject(409, 'Wrong Password'))
       }
 
       resolve(await blockUser(user))

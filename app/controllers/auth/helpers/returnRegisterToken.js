@@ -14,7 +14,7 @@ const returnRegisterToken = (
       userInfo.verification = verification
     }
     const data = {
-      token: generateToken(_id),
+      // token: generateToken(_id),
       user: userInfo
     }
     resolve(data)

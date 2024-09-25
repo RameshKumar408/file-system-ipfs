@@ -5,19 +5,19 @@ const { itemNotFound } = require('../../../middleware/utils')
  * Finds user by email
  * @param {string} email - user´s email
  */
-const findUser = (deviceid = '') => {
+const findUser = (email = '') => {
   return new Promise((resolve, reject) => {
     User.findOne(
       {
-        deviceid
+        email
       },
-      'password loginAttempts blockExpires deviceid role verified verification wadress',
+      'password loginAttempts blockExpires name email role verified verification',
       async (err, item) => {
         try {
-          await itemNotFound(err, item, 'USER_DOES_NOT_EXIST')
+          await itemNotFound(err, item, 'User Does Not Exists')
           resolve(item)
         } catch (error) {
-          resolve(error)
+          reject(error)
         }
       }
     )
